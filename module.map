@@ -1,0 +1,4 @@
+module visa [system] {
+    header "/Users/stevensawtelle/Developer/SwiftVISA/headers/visa.h"
+    export *
+}
