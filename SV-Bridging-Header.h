@@ -10,5 +10,7 @@
 #define SV_Bridging_Header_h
 
 #import "visa.h"
+#import "visatype.h"
+#import "vpptype.h"
 
 #endif /* SV_Bridging_Header_h */

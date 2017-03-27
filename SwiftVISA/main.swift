@@ -10,6 +10,11 @@ import Foundation
 import visa
 
 //static ViSession defaultRM;
+var defaultRM: ViSession = 5
+//var instr: ViSession
+var status: ViStatus
+//var retCount: ViUInt32
+//var writeCount: ViUInt32
 //static ViSession instr;
 //static ViStatus status;
 //static ViUInt32 retCount;
@@ -36,14 +41,14 @@ print("hi")
      * handle.  We will store this handle in defaultRM.
      */
     //defaultRM =
-    var status = viOpenDefaultRM(ViPSession!)
-    print(status)
-    if (Int(status) < VI_SUCCESS)
-    {
-        print("Could not open a session to the VISA Resource Manager!\n");
-        exit (EXIT_FAILURE);
-    }
-    
+    status = viOpenDefaultRM(&defaultRM)
+    //print(status)
+    //if (Int(status) < VI_SUCCESS)
+    //{
+    //    print("Could not open a session to the VISA Resource Manager!\n");
+    //    exit (EXIT_FAILURE);
+    //}
+
     /*
      * Now we will open a VISA session to a device at Primary Address 2.
      * You can use any address for your instrument. In this example we are
@@ -114,8 +119,8 @@ print("hi")
      * viClose. This operation frees all system resources.
      */
     //Close:
-    print("Closing Sessions\nHit enter to continue.");
-    fflush(stdin);
-    getchar();
-    status = viClose(instr);
-    status = viClose(defaultRM);
+    //print("Closing Sessions\nHit enter to continue.");
+    //fflush(stdin);
+    //getchar();
+    //status = viClose(instr);
+    //status = viClose(defaultRM);
