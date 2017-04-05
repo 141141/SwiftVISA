@@ -10,7 +10,7 @@ import Foundation
 import visa
 
 //static ViSession defaultRM;
-var defaultRM: ViSession = 5
+var defaultRM: ViSession = CUnsignedInt(5)
 //var instr: ViSession
 var status: ViStatus
 //var retCount: ViUInt32
@@ -42,6 +42,16 @@ print("hi")
      */
     //defaultRM =
     status = viOpenDefaultRM(&defaultRM)
+
+
+
+
+
+//CREATE new function in visa.h and try run cases on it. give params etc
+
+
+
+
     //print(status)
     //if (Int(status) < VI_SUCCESS)
     //{
