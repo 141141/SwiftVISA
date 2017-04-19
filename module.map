@@ -1,6 +1,12 @@
 module visa [system] {
-    header "/Users/stevensawtelle/Developer/SwiftVISA/headers/visa.h"
-    header "/Users/stevensawtelle/Developer/SwiftVISA/headers/visatype.h"
-    header "/Users/stevensawtelle/Developer/SwiftVISA/headers/vpptype.h"
+    header "/Library/Frameworks/VISA.framework/Versions/A/Headers/visa.h"
+    header "/Library/Frameworks/VISA.framework/Versions/A/Headers/visatype.h"
+    header "/Library/Frameworks/VISA.framework/Versions/A/Headers/vpptype.h"
     export *
 }
+//module visa [system] {
+//    header "/Users/stevensawtelle/Developer/SwiftVISA/headers/visa.h"
+//    header "/Users/stevensawtelle/Developer/SwiftVISA/headers/visatype.h"
+//    header "/Users/stevensawtelle/Developer/SwiftVISA/headers/vpptype.h"
+//    export *
+//}

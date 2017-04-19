@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6DED140E1E85837100C722B3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DED140D1E85837100C722B3 /* main.swift */; };
+		6DFBB55F1EA7D0070087A353 /* VISA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFBB55E1EA7D0070087A353 /* VISA.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,7 @@
 		6DED14171E8583A200C722B3 /* visatype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = visatype.h; path = ../Headers/visatype.h; sourceTree = "<group>"; };
 		6DED14181E8583A200C722B3 /* vpptype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vpptype.h; path = ../Headers/vpptype.h; sourceTree = "<group>"; };
 		6DED141A1E85873B00C722B3 /* module.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.map; sourceTree = "<group>"; };
+		6DFBB55E1EA7D0070087A353 /* VISA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VISA.framework; path = ../../../../Library/Frameworks/VISA.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DFBB55F1EA7D0070087A353 /* VISA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,10 +49,11 @@
 		6DED14011E85837100C722B3 = {
 			isa = PBXGroup;
 			children = (
-				6DED14191E8586D500C722B3 /* visa */,
+				6DED14191E8586D500C722B3 /* VISA */,
 				6DED140C1E85837100C722B3 /* SwiftVISA */,
 				6DED140B1E85837100C722B3 /* Products */,
 				6DED14151E8583A200C722B3 /* Headers */,
+				6DFBB55D1EA7D0070087A353 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,12 +84,20 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
-		6DED14191E8586D500C722B3 /* visa */ = {
+		6DED14191E8586D500C722B3 /* VISA */ = {
 			isa = PBXGroup;
 			children = (
 				6DED141A1E85873B00C722B3 /* module.map */,
 			);
-			name = visa;
+			name = VISA;
+			sourceTree = "<group>";
+		};
+		6DFBB55D1EA7D0070087A353 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DFBB55E1EA7D0070087A353 /* VISA.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,7 +265,12 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/VISA";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -263,7 +280,12 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/VISA";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

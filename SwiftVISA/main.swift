@@ -9,42 +9,39 @@
 import Foundation
 import visa
 
-//static ViSession defaultRM;
-var defaultRM: ViSession = CUnsignedInt(5)
-//var instr: ViSession
-var status: ViStatus
-//var retCount: ViUInt32
-//var writeCount: ViUInt32
-//static ViSession instr;
-//static ViStatus status;
-//static ViUInt32 retCount;
-//static ViUInt32 writeCount;
-//static unsigned char buffer[100];
-//static char stringinput[512];
 
-print("hi")
+print("Hello, World!")
+
+var defaultRM: ViSession = CUnsignedInt(0)
+var status: ViStatus = CInt(-1)
+var count: ViUInt32 = CUnsignedInt(0)
+var portNo: ViUInt16 = CUnsignedShort(0)
+
+print("defaultRM = ", defaultRM)
 
 /*
- * In every source code or header file that you use it is necessary to prototype
- * your VISA variables at the beginning of the file. You need to declare the VISA
- * session, VISA integers, VISA strings, VISA pointers, and VISA floating variables.
- * Remember that if you are prototyping variables that are to be used as part of the
- * VISA session that need this prototyping. As an example, above retCount has been
- * prototyped as a static variable to this particular module.   It is an integer of
- * bit length 32. If you are uncertain how to declare your VISA prototypes refer
- * to the VISA help under the Section titled Type Assignments Table. The VISA
- * help is located in your NI-VISA directory or folder.
+ * First we must call viOpenDefaultRM to get the resource manager
+ * handle.  We will store this handle in defaultRM.
+ * Note that you need to cast the return value as a CInt before it can be stored in status
  */
+status = CInt(viOpenDefaultRM(&defaultRM))
 
-    /*
-     * First we must call viOpenDefaultRM to get the resource manager
-     * handle.  We will store this handle in defaultRM.
-     */
-    //defaultRM =
-    status = viOpenDefaultRM(&defaultRM)
+print("status = ", status)
+print("defaultRM = ", defaultRM)
 
 
+if (status < CInt(VI_SUCCESS)) {
+    print("Could not open a session to the VISA Resource Manager!\n");
+    exit (EXIT_FAILURE);
+}
+else {
+    print("ViSession open with defaultRM = ", CInt(defaultRM))
+}
 
+
+
+// Close the ViSession to avoid a memory error
+status = CInt(viClose(defaultRM))
 
 
 //CREATE new function in visa.h and try run cases on it. give params etc
