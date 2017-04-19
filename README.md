@@ -1,5 +1,7 @@
 Swift project containing the work of Steven Sawtelle's Fulton Undergraduate Research Intiative project for the Spring of 2017. The aim of this project is to create a Swift wrapper of the National Instruments Virtual Instrument Software Architecture (VISA) standard. Funded by Arizona State University and mentored by Dr. Owen Hildreth
 
+You can view this link for further instructions, which helped me get set up as well: https://spin.atomicobject.com/2015/02/23/c-libraries-swift/
+
 How to install:
 
 - Download the three visa header files: visa.h, visatype.h, and vpptype.h
