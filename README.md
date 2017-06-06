@@ -64,5 +64,3 @@ module visa [system] {
 PATH_TO_REPOSITORY/SwiftVISA
 
 - Under Swift Compiler - General, create a new entry for Objective-C Bridging Header pointing to your objective file, based off of your PATH_TO_REPOSITORY. For example, for me this is "SwiftVISA/SV-Bridging-Header.h"
-
-----pictures here----
